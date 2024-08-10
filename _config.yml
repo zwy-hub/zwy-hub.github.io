@@ -1,0 +1,35 @@
+# title: zwy
+email: your-email@domain.com
+author: GitHub User
+
+copyright: "Unpublished Work (cleft) 2024-{currentYear} {author}"
+
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. https://example.com
+favicon: "/favicon.ico" # 网站小图标
+
+yat:
+  date_format: "%b %d, %Y"
+
+markdown: kramdown
+kmarkdown:
+  input: GFM
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-spaceship
+# 自定义jekyll-spaceship配置信息
+jekyll-spaceship:
+  mathjax-processor:
+    src:
+      # - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js 这个访问太慢，下载到本地中
+      # - https://polyfill.io/v3/polyfill.min.js?features=es6 这个文件无法访问
+      - /assets/js/tex-mml-chtml.js
