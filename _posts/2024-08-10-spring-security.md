@@ -56,13 +56,11 @@ tags: [Spring, Spring Security]
 {% highlight java linenos %}
 
 public User login(User user) {
-    if (user == null && user.getUsername == null) {
-        Assert.isTrue(user != null
-                && StringUtils.isNotBlank(user.getUsername()) 
-                && StringUtils.isNotBlank(user.getPassword()), "用户名或密码不能为空");
-        // 登录操作
-        ...
-    }
+    Assert.isTrue(user != null
+            && StringUtils.isNotBlank(user.getUsername()) 
+            && StringUtils.isNotBlank(user.getPassword()), "用户名或密码不能为空");
+    // 登录操作
+    ...
 }
 
 {% endhighlight %}
